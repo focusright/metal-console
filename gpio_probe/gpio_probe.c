@@ -9,9 +9,9 @@ int main(void) {
 
     while (true) {
         gpio_put(signal_pin, 1);
-        sleep_ms(100);
+        sleep_ms(500);
 
         gpio_put(signal_pin, 0);
-        sleep_ms(900);
+        sleep_ms(500);
     }
 }
