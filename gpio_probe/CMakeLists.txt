@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(gpio_probe gpio_probe.c )
+add_executable(gpio_probe gpio_probe.c gpio_asm.S)
 
 pico_set_program_name(gpio_probe "gpio_probe")
 pico_set_program_version(gpio_probe "0.1")
