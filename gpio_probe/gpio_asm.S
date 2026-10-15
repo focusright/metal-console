@@ -44,4 +44,14 @@ gp2_init_low:
     bx   lr                 @ Return to C
 .size gp2_init_low, .-gp2_init_low
 
+.global gp2_select_sio
+.type gp2_select_sio, %function
+.thumb_func
+gp2_select_sio:
+    ldr  r0, =0x40014014    @ IO_BANK0_GPIO2_CTRL
+    movs r1, #5             @ FUNCSEL = SIO (00101)
+    str  r1, [r0]           @ Select SIO for GP2
+    bx   lr
+.size gp2_select_sio, .-gp2_select_sio
+
 .ltorg
